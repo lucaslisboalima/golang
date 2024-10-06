@@ -1,0 +1,78 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	operacao := 0
+	num1, num2 := 0, 0
+
+	fmt.Println("Selecione a operação desejada:")
+	fmt.Println("1 - Soma")
+	fmt.Println("2 - Subtração")
+	fmt.Println("3 - Multiplicação")
+	fmt.Println("4 - Divisão")
+	fmt.Scanln(&operacao)
+
+	switch operacao {
+	case 1:
+		fmt.Println("Informe o primeiro número")
+		fmt.Scanln(&num1)
+
+		fmt.Println("Informe o segundo número")
+		fmt.Scanln(&num2)
+
+		resultado := soma(int8(num1), int8(num2))
+
+		fmt.Println("Resultado da soma é:", resultado)
+
+	case 2:
+		fmt.Println("Informe o primeiro número")
+		fmt.Scanln(&num1)
+
+		fmt.Println("Informe o segundo número")
+		fmt.Scanln(&num2)
+
+		resultado := subtracao(int8(num1), int8(num2))
+
+		fmt.Println("Resultado da subtração é:", resultado)
+
+	case 3:
+		fmt.Println("Informe o primeiro número")
+		fmt.Scanln(&num1)
+
+		fmt.Println("Informe o segundo número")
+		fmt.Scanln(&num2)
+
+		resultado := multiplicacao(int8(num1), int8(num2))
+
+		fmt.Println("Resultado da multiplicação é:", resultado)
+
+	case 4:
+		fmt.Println("Informe o primeiro número")
+		fmt.Scanln(&num1)
+
+		fmt.Println("Informe o segundo número")
+		fmt.Scanln(&num2)
+
+		resultado := divisao(int8(num1), int8(num2))
+
+		fmt.Println("Resultado da divisão é:", resultado)
+	}
+}
+
+func soma(numero1 int8, numero2 int8) int8 {
+	return numero1 + numero2
+}
+
+func subtracao(numero1 int8, numero2 int8) int8 {
+	return numero1 - numero2
+}
+
+func multiplicacao(numero1 int8, numero2 int8) int8 {
+	return numero1 * numero2
+}
+
+func divisao(numero1 int8, numero2 int8) int8 {
+	return numero1 / numero2
+}
